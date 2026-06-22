@@ -1,0 +1,29 @@
+﻿@using ViewComponentSite.Core.Entities
+
+@model List<Category>
+
+<section>
+
+    <h4>Categorias</h4>
+
+    <table class="table mt-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model)
+            {
+                <tr>
+                    <td>@c.Id</td>
+                    <td>@c.Name</td>
+                    <td>@c.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</section>

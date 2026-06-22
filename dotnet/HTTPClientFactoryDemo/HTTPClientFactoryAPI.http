@@ -1,0 +1,6 @@
+@HTTPClientFactoryAPI_HostAddress = http://localhost:5236
+
+GET {{HTTPClientFactoryAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
