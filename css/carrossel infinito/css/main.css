@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    width: 100%;
+    margin: 10% auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    animation: spin 20s infinite linear;
+    will-change: transform;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-right: 16px;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    background: cornflowerblue;
+    font-size: 2rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+@keyframes spin {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
