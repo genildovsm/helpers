@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.color-success {
+  color: hsl(147, 60%, 50%);
+}
+
+.bg-success {
+  background-color: hsl(147, 60%, 50%);
+  color: #fff !important;
+}
+
+.color-primary {
+  color: hsl(200, 60%, 50%);
+}
+
+.bg-primary {
+  background-color: hsl(200, 60%, 50%);
+  color: #fff !important;
+}
+
+.color-info {
+  color: hsl(185, 60%, 73%);
+}
+
+.bg-info {
+  background-color: hsl(185, 60%, 73%);
+  color: rgb(40, 40, 40) !important;
+}
+
+.color-warning {
+  color: hsl(41, 60%, 69%);
+}
+
+.bg-warning {
+  background-color: hsl(41, 60%, 69%);
+  color: rgb(40, 40, 40) !important;
+}
+
+.color-danger {
+  color: hsl(0, 100%, 60%);
+}
+
+.bg-danger {
+  background-color: hsl(0, 100%, 60%);
+  color: #fff !important;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-variation-settings: "GRAD" 0;
+}
+
+body {
+  margin: 0;
+  color: rgb(40, 40, 40);
+}
+
+input[type=text] {
+  color: rgb(40, 40, 40);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.my-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,30 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: nginx-prometheus-rule
+  namespace: monitoring
+  labels:
+    prometheus: k8s
+    role: alert-rules
+    app.kubernetes.io/name: kube-prometheus
+    app.kubernetes.io/part-of: kube-prometheus
+spec:
+  groups:
+    - name: nginx-prometheus-rule
+      rules:
+        - alert: NginxDown
+          expr: nginx_up == 0
+          for: 1m
+          labels:
+            severity: critical
+          annotations:
+            summary: "O nginx está offline: {{ $labels.pod }}"
+            description: "O servidor web das aplicações está offline"
+        - alert: NginxHighRequestRate
+          expr: rate(nginx_http_requests_total[5m]) > 10
+          for: 1m
+          labels:
+            severity: warning
+          annotations:
+            summary: "O nginx está recebendo uma grande quantidade de requests"
+            description: "O servidor web está recebendo uma quantidade muito alta de requisições."
